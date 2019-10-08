@@ -15,25 +15,25 @@ function Todoform(props) {
     return (
         <div>
             {/* <form> */}
-                <input
-                    type="text"
-                    value={todo}
-                    onChange={onInputChange}
-                    placeholder="add todo here"
-                />
+            <input
+                type="text"
+                value={todo}
+                onChange={onInputChange}
+                placeholder="add todo here"
+            />
 
-                <button onClick={() => {
-                    props.dispatch({
-                        type: "ADD_TODO",
-                        todo: todo
-                    })
-                }}>Add Todo</button>
-                <button onClick={() => {
-                    props.dispatch({
-                        type: "CLEAR_TODO",
-                        todo: todo
-                    })
-                }}>Clear Todo</button>
+            <button onClick={() => {
+                props.dispatch({
+                    type: "ADD_TODO",
+                    todo: todo
+                })
+            }}>Add Todo</button>
+            <button onClick={() => {
+                props.dispatch({
+                    type: "CLEAR_TODO",
+
+                })
+            }}>Clear Completed Todo</button>
             {/* </form> */}
         </div>
     )
