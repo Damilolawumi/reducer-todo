@@ -1,18 +1,23 @@
-import React, {useReducer} from 'react';
+import React, { useReducer } from 'react';
 import Todo from './Todo'
 
 
-function Todolist () {
 
-    const [state, dispatch] = useReducer(reducer, initialState)
+function Todolist(props) {
+
+   
 
     return (
         <div>
-            {initialState.map(todo => {
-                return <Todo todo={todo}/>
-            })}        
+            {props.state.map(todo => {
+                return <Todo
+                    todo={todo}
+                    dispatch={props.dispatch}
+                // toggleTodo={toggleTodo}
+                />
+            })}
         </div>
     )
 }
 
-export default Todolist
+export default Todolist;
